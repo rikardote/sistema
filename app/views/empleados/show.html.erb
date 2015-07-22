@@ -1,0 +1,55 @@
+<div class="col-md-5">
+<p>
+  <strong>Numero de Empleado:</strong>
+  <%= @empleado.num_empleado %>
+</p>
+<p>
+  <strong>Nombre:</strong>
+  <%= @empleado.nombre %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @empleado.apellido_paterno %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @empleado.apellido_materno %>
+</p>
+<p>
+  <strong>Departamento:</strong>
+  <%= @empleado.departamento.dpto_descripcion %>
+</p>
+<p>
+  <strong>Puesto:</strong>
+  <%= @empleado.puesto.name %>
+</p>
+
+<h3>Agregar Incidencias: </h3>
+<%= render "captures/form" %>
+<ul id="captures-box">
+
+<p>
+<%= link_to 'Regresar', empleados_path %>
+</div>
+
+<div class="col-md-7">
+<% @empleado.captures.each do |c| %>
+  <li>
+    <%= c.empleado.num_empleado.to_s.rjust(6, '0')%> -  
+    <%= c.empleado.nombre + " "+c.empleado.apellido_materno + " "+c.empleado.apellido_paterno%> |   
+    <%= c.incident.cod.to_s.rjust(2, '0')%> | 
+    <%= c.fecha_inicial.strftime("%d/%m/%Y")%> | 
+    <%= c.fecha_final.strftime("%d/%m/%Y")%> | 
+    
+    <%if c.vacation.try(:id)%>
+      <%  periodo = "#{c.vacation.period.to_s.rjust(2, '0')}/#{c.vacation.year}"%>
+      <%= periodo %>
+    <%end%>
+  </li>
+<%end%>
+</ul>
+
+</div>
+<br />

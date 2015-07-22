@@ -1,0 +1,23 @@
+<%= simple_form_for([@empleado,@capture]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+    
+   
+    <%= f.collection_select :incident_id, Incident.order('cod ASC'), :id, :incident_with_desc, {include_blank: 'Selecciona una incidencia...'},{ class: 'form-control'}%>
+    <br />
+    <%= f.text_field :fecha_inicial, as: :datepicker, input_html: { class: 'form-control'} , :placeholder => "Fecha Inicio" %>
+    <%= f.text_field :fecha_final, as: :datepicker , input_html: { class: 'form-control'}, :placeholder => "Fecha Final"  %>
+    <br />
+    <br />
+    <%= f.collection_select :vacation_id, Vacation.order('id DESC'), :id, :vacations_with_desc, {include_blank: 'Selecciona un periodo...'},{ class: 'form-control'}%>
+    <br />
+   
+    <%= f.input :user_id,  as: :hidden%>
+ </div>
+<br>
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary'%>
+  </div>
+<% end %>
+<%#, remote: true, html: {id: "captures-form", :"data-type" => "json"}%>

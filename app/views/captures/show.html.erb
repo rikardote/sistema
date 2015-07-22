@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Empleado:</strong>
+  <%= @capture.empleado %>
+</p>
+
+<p>
+  <strong>Incident:</strong>
+  <%= @capture.incident %>
+</p>
+
+<p>
+  <strong>Fecha inicial:</strong>
+  <%= @capture.fecha_inicial %>
+</p>
+
+<p>
+  <strong>Fecha final:</strong>
+  <%= @capture.fecha_final %>
+</p>
+
+<p>
+  <strong>Periodo:</strong>
+  <%= @capture.periodo %>
+</p>
+
+<%= link_to 'Edit', edit_capture_path(@capture) %> |
+<%= link_to 'Back', captures_path %>

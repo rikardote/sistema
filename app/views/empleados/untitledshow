@@ -1,0 +1,44 @@
+<%=render 'dialog' %>
+<p>
+  <strong>Numero de Empleado:</strong>
+  <%= @empleado.num_empleado %>
+</p>
+<p>
+  <strong>Nombre:</strong>
+  <%= @empleado.nombre %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @empleado.apellido_paterno %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @empleado.apellido_materno %>
+</p>
+<p>
+  <strong>Adscripcion:</strong>
+  <%= @empleado.centro.centro_descripcion %>
+  
+</p>
+<p>
+  <strong>Departamento:</strong>
+  <%= @empleado.departamento.dpto_descripcion %>
+</p>
+<p>
+  <strong>Puesto:</strong>
+  <%= @empleado.puesto.name %>
+</p>
+<p>
+  <strong>Turno opcional:</strong>
+  <%= @empleado.turno_id ?  'SI' : '' %>
+</p>
+
+<p>
+
+<% nombre_completo = "#{@empleado.nombre} #{@empleado.apellido_paterno} #{@empleado.apellido_materno}" %>
+<%= link_to 'Modificar', edit_empleado_path(@empleado), remote: true, :class => "btn btn-warning btn-sm" %> 
+<%=link_to 'BORRAR', @empleado, method: :delete, data: { confirm: 'Estas Seguro de borrar a: ' + nombre_completo },:class => "btn btn-danger btn-sm"%>
+<br />
+<%= link_to 'Regresar', empleados_path %>

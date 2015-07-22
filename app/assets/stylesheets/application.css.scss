@@ -1,0 +1,36 @@
+/*
+*= require bootstrap-datepicker3
+
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+nav {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  .navbar-brand {
+    a {
+      color: #BD1E23;
+      font-weight: bold;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+textarea {
+  min-height: 250px;
+  text-align: justify;
+}
+footer { border-top: 1px solid #ccc; margin: 40px 0; padding-top: 20px; text-align: right; }
+  
+

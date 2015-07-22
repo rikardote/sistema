@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Qna cod:</strong>
+  <%= @qna.qna_cod %>
+</p>
+
+<p>
+  <strong>Qna year:</strong>
+  <%= @qna.qna_year %>
+</p>
+<p>
+
+<%= @qna.activate ?  'SI' : 'NO' %>
+</p>
+
+<%= link_to 'Edit', edit_qna_path(@qna) %> |
+<%= link_to 'Back', qnas_path %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qna_cod: 1
+  qna_year: MyString
+
+two:
+  qna_cod: 1
+  qna_year: MyString

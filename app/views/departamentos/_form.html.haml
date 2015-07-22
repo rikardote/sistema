@@ -1,0 +1,15 @@
+= simple_form_for @departamento, html: { multipart: true } do |f|
+  - if @departamento.errors.any?
+    #errors
+      %h2
+        = pluralize(@departamento.errors.count, "error")
+        precented this centro from saving
+        %ul
+          - @departamento.error.full_messages.each do |msg|
+            %li = msg
+  .form-group
+    = f.input :dpto_descripcion, input_html: { class: 'form-control'}
+  .form-group
+    = collection_select(:departamento, :centro_id, Centro.all.order('centro_iden ASC'), :id, :name_with_desc, { :multiple => false }, class: 'form-control' )
+    
+  =f.button :submit, class: 'btn btn-primary'

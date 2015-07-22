@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  empleado_id: 
+  incident_id: 
+  fecha_inicial: 2015-07-06
+  fecha_final: 2015-07-06
+  periodo: MyString
+
+two:
+  empleado_id: 
+  incident_id: 
+  fecha_inicial: 2015-07-06
+  fecha_final: 2015-07-06
+  periodo: MyString

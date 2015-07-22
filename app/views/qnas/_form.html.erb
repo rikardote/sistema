@@ -1,0 +1,13 @@
+<%= simple_form_for(@qna) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+    <%= f.input :qna_cod, class: 'form-control' %>
+    <%= f.input :qna_year, class: 'form-control'%>
+    <%= f.check_box :activate, {:class=>"checkbox"}, "true", "false"%>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary'%>
+  </div>
+
+<% end %>

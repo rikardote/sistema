@@ -1,0 +1,18 @@
+%p#notice= notice
+.panel.panel-default
+  %table.table.table-hover.table-condensed
+    %thead
+      %tr
+        %th Dpto descripcion
+        %th Centro
+        %th{:colspan => "3"}
+    %tbody
+      - @departamentos.each do |departamento|
+        %tr
+          %td= departamento.dpto_descripcion
+          %td= departamento.centro.centro_descripcion
+          %td= link_to 'Show', departamento
+          %td= link_to 'Edit', edit_departamento_path(departamento)
+          %td= link_to 'Destroy', departamento, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Departamento', new_departamento_path

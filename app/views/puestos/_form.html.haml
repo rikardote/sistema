@@ -1,0 +1,14 @@
+= simple_form_for @puesto, html: { multipart: true } do |f|
+  - if @puesto.errors.any?
+    #errors
+      %h2
+        = pluralize(@puesto.errors.count, "error")
+        precented this centro from saving
+        %ul
+          - @puesto.error.full_messages.each do |msg|
+            %li = msg
+  .form-group
+    = f.input :name, input_html: { class: 'form-control'}
+ 
+  =f.button :submit, class: 'btn btn-primary'
+
