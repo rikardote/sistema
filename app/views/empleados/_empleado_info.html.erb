@@ -37,7 +37,7 @@
 <p>
 
 <% nombre_completo = "#{@empleado.nombre} #{@empleado.apellido_paterno} #{@empleado.apellido_materno}" %>
-<%= link_to 'Modificar', edit_empleado_path(@empleado), remote: true, :class => "btn btn-warning btn-sm" %> 
-<%=link_to 'BORRAR', @empleado, method: :delete, data: { confirm: 'Estas Seguro de borrar a: ' + nombre_completo },:class => "btn btn-danger btn-sm"%>
-<br />
-<%= link_to 'Regresar', empleados_path %>
+<div class="modal-footer">
+  <%= link_to 'Modificar', edit_empleado_path(@empleado), remote: true, :class => "btn btn-warning btn-sm" %> 
+  <%=link_to 'BORRAR', @empleado, method: :delete, data: { confirm: 'Estas Seguro de borrar a: ' + nombre_completo },:class => "btn btn-danger btn-sm"%>
+</div>
