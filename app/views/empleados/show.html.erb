@@ -5,17 +5,8 @@
 </p>
 <p>
   <strong>Nombre:</strong>
-  <%= @empleado.nombre %>
-</p>
-
-<p>
-  <strong>Apellido paterno:</strong>
-  <%= @empleado.apellido_paterno %>
-</p>
-
-<p>
-  <strong>Apellido materno:</strong>
-  <%= @empleado.apellido_materno %>
+  <% nombre = "#{@empleado.nombre}  #{@empleado.apellido_materno}  #{@empleado.apellido_paterno}"%>
+  <%= nombre %>
 </p>
 <p>
   <strong>Departamento:</strong>
