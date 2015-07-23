@@ -8,6 +8,8 @@
 Empleado.create(num_empleado: 336958,nombre:"MONICA", apellido_materno: "GUTIERREZ", apellido_paterno: "SAMANIEGO", centro_id: 1, departamento_id: 1, puesto_id: 1)
 Empleado.create(num_empleado: 145865,nombre:"HECTOR RICARDO", apellido_materno: "FUENTES", apellido_paterno: "ARMENTA", centro_id: 2, departamento_id: 1, puesto_id: 3)
 Empleado.create(num_empleado: 72568,nombre:"ALEJANDRO", apellido_materno: "PRADO", apellido_paterno: "SALCIDO", centro_id: 1, departamento_id: 2, puesto_id: 4)
+Empleado.create(num_empleado: 334585,nombre:"MONY", apellido_materno: "FAIRY", apellido_paterno: "QUEEN", centro_id: 1, departamento_id: 1, puesto_id: 1)
+
 
 Centro.create(centro_iden: 53, centro_descripcion: "SUBDELEGACION MEDICA")
 Centro.create(centro_iden: 105, centro_descripcion: "SUBDELEGACION DE ADMINISTRACION")
@@ -27,3 +29,14 @@ Incident.create(cod: 2, name: "Retardo de 30 a 45 Minutos")
 Incident.create(cod: 3, name: "Retardo de 46 a 59 Minutos")
 Incident.create(cod: 4, name: "Pago de media jornada laboral")
 Incident.create(cod: 7, name: "Retardo por consulta medica")
+Incident.create(cod: 41, name: "Licencia con goce de sueldo")
+Incident.create(cod: 55, name: "Licencia medica")
+Incident.create(cod: 60, name: "Vacaciones ordinarias")
+
+Vacation.create(periodo: 1, year: "2014")
+Vacation.create(periodo: 2, year: "2014")
+Vacation.create(periodo: 1, year: "2015")
+Vacation.create(periodo: 2, year: "2015")
+
+
+
