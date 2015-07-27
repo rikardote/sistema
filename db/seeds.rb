@@ -33,10 +33,10 @@ Incident.create(cod: 41, name: "Licencia con goce de sueldo")
 Incident.create(cod: 55, name: "Licencia medica")
 Incident.create(cod: 60, name: "Vacaciones ordinarias")
 
-Vacation.create(periodo: 1, year: "2014")
-Vacation.create(periodo: 2, year: "2014")
-Vacation.create(periodo: 1, year: "2015")
-Vacation.create(periodo: 2, year: "2015")
+Vacation.create(period: 1, year: "2014")
+Vacation.create(period: 2, year: "2014")
+Vacation.create(period: 1, year: "2015")
+Vacation.create(period: 2, year: "2015")
 
 
 
