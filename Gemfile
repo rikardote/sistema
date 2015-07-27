@@ -19,7 +19,7 @@ gem 'autoprefixer-rails'
 gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-datepicker-rails', '~> 1.4.0'
 gem 'hirb', '~> 0.7.3'
-
+gem 'font-awesome-sass'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
