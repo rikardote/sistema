@@ -7,7 +7,7 @@ class Empleado < ActiveRecord::Base
   
   
   def self.search(query)
-    where("num_empleado like ?", "%#{query}%") 
+    where("num_empleado like ?", "%#{query}%")
   end
   
 scope :ordenado, ->{ order("num_empleado ASC") }

@@ -9,10 +9,11 @@ class EmpleadosController < ApplicationController
   def index
       
     if params[:search]
-      @empleados = Empleado.search(params[:search])
+      @empleado= Empleado.search(params[:search])
+     
       
     else
-      @empleados = Empleado.all.ordenado
+      @empleado = Empleado
       
     end
 
@@ -60,7 +61,7 @@ class EmpleadosController < ApplicationController
   def update
     respond_to do |format|
       if @empleado.update(empleado_params)
-        format.html { redirect_to @empleado, notice: 'Empleado was successfully updated.' }
+        format.html { redirect_to Empleado, notice: 'Empleado was successfully updated.' }
         format.json { render :show, status: :ok, location: @empleado }
       else
         format.html { render :edit }

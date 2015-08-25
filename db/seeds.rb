@@ -5,10 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Empleado.create(num_empleado: 336958,nombre:"MONICA", apellido_materno: "GUTIERREZ", apellido_paterno: "SAMANIEGO", centro_id: 1, departamento_id: 1, puesto_id: 1)
-Empleado.create(num_empleado: 145865,nombre:"HECTOR RICARDO", apellido_materno: "FUENTES", apellido_paterno: "ARMENTA", centro_id: 2, departamento_id: 1, puesto_id: 3)
-Empleado.create(num_empleado: 72568,nombre:"ALEJANDRO", apellido_materno: "PRADO", apellido_paterno: "SALCIDO", centro_id: 1, departamento_id: 2, puesto_id: 4)
-Empleado.create(num_empleado: 334585,nombre:"MONY", apellido_materno: "FAIRY", apellido_paterno: "QUEEN", centro_id: 1, departamento_id: 1, puesto_id: 1)
+Empleado.create(num_empleado: 0,nombre:"dummy", apellido_paterno: "file", apellido_materno: "file", centro_id: 1, departamento_id: 1, puesto_id: 1, activo: false)
+Empleado.create(num_empleado: 336958,nombre:"MONICA", apellido_paterno: "GUTIERREZ", apellido_materno: "SAMANIEGO", centro_id: 1, departamento_id: 1, puesto_id: 1, activo: true)
+Empleado.create(num_empleado: 145865,nombre:"HECTOR RICARDO", apellido_paterno: "FUENTES", apellido_materno: "ARMENTA", centro_id: 2, departamento_id: 1, puesto_id: 3, activo: true)
+Empleado.create(num_empleado: 72568,nombre:"ALEJANDRO", apellido_paterno: "PRADO", apellido_materno: "SALCIDO", centro_id: 1, departamento_id: 2, puesto_id: 4, activo: true)
+Empleado.create(num_empleado: 334585,nombre:"MONY", apellido_paterno: "FAIRY", apellido_materno: "QUEEN", centro_id: 1, departamento_id: 1, puesto_id: 1, activo: true)
 
 
 Centro.create(centro_iden: 53, centro_descripcion: "SUBDELEGACION MEDICA")
@@ -33,10 +34,10 @@ Incident.create(cod: 41, name: "Licencia con goce de sueldo")
 Incident.create(cod: 55, name: "Licencia medica")
 Incident.create(cod: 60, name: "Vacaciones ordinarias")
 
-Vacation.create(periodo: 1, year: "2014")
-Vacation.create(periodo: 2, year: "2014")
-Vacation.create(periodo: 1, year: "2015")
-Vacation.create(periodo: 2, year: "2015")
+Vacation.create(period: 1, year: "2014")
+Vacation.create(period: 2, year: "2014")
+Vacation.create(period: 1, year: "2015")
+Vacation.create(period: 2, year: "2015")
 
 
 
