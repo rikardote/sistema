@@ -1,5 +1,9 @@
 <p id="notice">
+<<<<<<< HEAD
   
+=======
+  <%= notice %>
+>>>>>>> f20742d122cc1ec40f28a0865023bee2dd104b1b
 </p>
 <div class="panel panel-default">
   <table class="table table-hover table-condensed">
@@ -17,14 +21,20 @@
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
       <% empleado = @empleado.first %>
         <% if empleado.present? && empleado.num_empleado != 0 %>
+=======
+      <% @empleados.each do |empleado| %>
+        <% if !empleado.activo %>
+>>>>>>> f20742d122cc1ec40f28a0865023bee2dd104b1b
           <tr>
             <td>
               <%= link_to empleado.num_empleado.to_s.rjust(6, '0'), empleado, remote: true %>
             </td>
             <td>
               <% nombre_completo = "#{empleado.nombre} #{empleado.apellido_paterno} #{empleado.apellido_materno}" %>
+<<<<<<< HEAD
               
               <%if empleado.activo%>
                 <%= link_to nombre_completo, empleado %>
@@ -37,9 +47,22 @@
           </tr>
         
         <%end%>
+=======
+              <%= link_to nombre_completo, empleado %>
+            </td>
+            <td></td>
+          </tr>
+        <% end %>
+      <% end %>
+>>>>>>> f20742d122cc1ec40f28a0865023bee2dd104b1b
     </tbody>
   </table>
 </div>
 <%= render 'dialog'  %>
 <br/>
+<<<<<<< HEAD
 <%= link_to 'Nuevo Empleado', new_empleado_path, remote:true %>
+=======
+<%= link_to content_tag(:i,nil, class: 'fa fa-user-plus fa-3x'), new_empleado_path, remote:true %>
+
+>>>>>>> f20742d122cc1ec40f28a0865023bee2dd104b1b
